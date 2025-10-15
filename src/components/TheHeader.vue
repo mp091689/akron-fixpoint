@@ -47,7 +47,7 @@ onMounted(() => {
       <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('services')" class="w-full text-center">services</a></li>
       <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('about-us')" class="w-full text-center">About Us</a></li>
       <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('feedback')" class="w-full text-center">Feedback</a></li>
-      <li class="pt-6"><a @click.prevent="goTo('faq')" class="w-full text-center">FAQ</a></li>
+      <li class="py-6"><a @click.prevent="goTo('faq')" class="w-full text-center">FAQ</a></li>
     </ul>
   </header>
 </template>
