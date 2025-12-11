@@ -20,10 +20,10 @@ const bgStyle = computed(() => {
   <div class="mt-5">
     <div
       :style="bgStyle"
-      class="card-header rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end p-8 ">
-      <h4 class="text-white font-normal tracking-wide text-shadow-xs">{{ props.title }}</h4>
+      class="card-header rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end p-8">
+      <h4 class="font-normal tracking-wide text-shadow-xs">{{ props.title }}</h4>
     </div>
-    <div class="card-content">
+    <div class="card-content mt-4">
       <slot></slot>
     </div>
     <div v-if="$slots.footer" class="card-footer">
