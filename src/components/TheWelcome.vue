@@ -27,7 +27,7 @@ import bgCardDiagnostic from '@/assets/servises/diagnostic.webp'
   <TheCard :background-img="bgCardMac" title="Laptop service" />
   <TheCard :background-img="bgCardConsole" title="Gaming console service" />
   <TheCard :background-img="bgCardTV" title="TV service" />
-  <TheCard :background-img="bgCardDiagnostic">
+  <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic">
     <div class="space-y-4">
       <div>
         <h2 class="text-4xl">FixPoint Akron</h2>
@@ -40,9 +40,7 @@ import bgCardDiagnostic from '@/assets/servises/diagnostic.webp'
         Akron</strong>, diagnostics for your device
         are completely free. Every day, we handle numerous repairs, monitor the work of our
         technicians, and ensure that repair times for phones, laptops, tablets, and other gadgets
-        stay fast and reliable. We know that less than 1% of our customers decline repairs after
-        diagnostics — we simply have no reason to charge for it, because we’re confident in our
-        skills and the quality of our service.</p>
+        stay fast and reliable.</p>
     </div>
   </TheCard>
 </template>
