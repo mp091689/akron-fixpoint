@@ -8,6 +8,7 @@ import bgCardConsole from '@/assets/servises/console.webp'
 import bgCardTV from '@/assets/servises/tv.webp'
 import bgCardTablet from '@/assets/servises/tablet.webp'
 import bgCardDiagnostic from '@/assets/servises/diagnostic.webp'
+import BulletPointComponent from "@/components/BulletPointComponent.vue";
 </script>
 
 <template>
@@ -22,11 +23,33 @@ import bgCardDiagnostic from '@/assets/servises/diagnostic.webp'
       gaming consoles, and other electronics
       in Akron.</p>
   </div>
+  <h1 class="mt-16 text-4xl text-center">Our Services</h1>
   <TheCard :background-img="bgCardPhone" title="Cellphone service" />
   <TheCard :background-img="bgCardTablet" title="Tablet service" />
   <TheCard :background-img="bgCardMac" title="Laptop service" />
   <TheCard :background-img="bgCardConsole" title="Gaming console service" />
   <TheCard :background-img="bgCardTV" title="TV service" />
+  <ul class="grid grid-cols-2 gap-4 mt-5">
+    <li>
+      <BulletPointComponent :badge="'business_center'" :title="'Experience'"
+      >15+ years of professional repair expertise.</BulletPointComponent>
+    </li>
+
+    <li>
+      <BulletPointComponent :badge="'stethoscope'" :title="'Free Diagnostic'"
+      >Comprehensive device evaluation at no cost.</BulletPointComponent>
+    </li>
+
+    <li>
+      <BulletPointComponent :badge="'balance'" :title="'Fair Prices'"
+      >Clear, upfront pricing with no hidden charges.</BulletPointComponent>
+    </li>
+
+    <li>
+      <BulletPointComponent :badge="'verified'" :title="'Guarantee'"
+      >Warranty coverage from 1 to 12 months.</BulletPointComponent>
+    </li>
+  </ul>
   <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic">
     <div class="space-y-4">
       <div>
