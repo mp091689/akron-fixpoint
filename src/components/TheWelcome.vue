@@ -14,14 +14,12 @@ import BulletPointComponent from "@/components/BulletPointComponent.vue";
 <template>
   <div :style="{ backgroundImage: `url(${bgImage})` }"
        class="rounded-2xl w-full h-10/12 bg-cover bg-center flex flex-col items-center p-8">
-    <div class="flex flex-col">
-      <h2 class="text-left font-extrabold text-6xl text-shadow-2xs">FixPoint</h2>
-      <p class="text-right text-yellow-400 text-shadow-md font-bold text-2xl -mt-2">Akron</p>
+    <div class="flex flex-col mb-4">
+      <h2 class="text-left text-6xl text-gray-800">FixPoint</h2>
+      <p class="text-right text-gray-800 text-xl -mt-2">Akron</p>
     </div>
     <p class="text-center leading-8 text-gray-700">Professional repair of smartphones, tablets,
-      laptops,
-      gaming consoles, and other electronics
-      in Akron.</p>
+      laptops, gaming consoles, and other electronics in Akron.</p>
   </div>
   <h1 class="mt-16 text-4xl text-center">Our Services</h1>
   <TheCard :background-img="bgCardPhone" title="Cellphone service" />
