@@ -15,8 +15,8 @@ import BulletPointComponent from "@/components/BulletPointComponent.vue";
   <div :style="{ backgroundImage: `url(${bgImage})` }"
        class="rounded-2xl w-full h-10/12 bg-cover bg-center flex flex-col items-center p-8">
     <div class="flex flex-col">
-      <h2 class="text-left font-bold text-4xl text-shadow-2xs">FixPoint</h2>
-      <p class="text-right text-yellow-400 text-shadow-2xs">Akron</p>
+      <h2 class="text-left font-extrabold text-6xl text-shadow-2xs">FixPoint</h2>
+      <p class="text-right text-yellow-400 text-shadow-md font-bold text-2xl -mt-2">Akron</p>
     </div>
     <p class="text-center leading-8 text-gray-700">Professional repair of smartphones, tablets,
       laptops,
@@ -29,7 +29,7 @@ import BulletPointComponent from "@/components/BulletPointComponent.vue";
   <TheCard :background-img="bgCardMac" title="Laptop service" />
   <TheCard :background-img="bgCardConsole" title="Gaming console service" />
   <TheCard :background-img="bgCardTV" title="TV service" />
-  <ul class="grid grid-cols-2 gap-4 mt-5">
+  <ul class="grid grid-cols-2 gap-8 mt-18 mb-18">
     <li>
       <BulletPointComponent :badge="'business_center'" :title="'Experience'"
       >15+ years of professional repair expertise.</BulletPointComponent>
