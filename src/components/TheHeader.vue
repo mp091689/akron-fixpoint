@@ -1,27 +1,17 @@
 <script lang="ts" setup>
-import {nextTick, ref} from "vue";
-import router from "@/router";
+import {nextTick, ref} from "vue"
+import router from "@/router"
 
-const menuExpanded = ref(false);
+const menuExpanded = ref(false)
 
 const goTo = async (id: string) => {
-  await router.push({name: "home"});
-  await nextTick();
+  await router.push({ name: "home" })
+  await nextTick()
+  menuExpanded.value = false
+  await nextTick()
 
-  const main = document.querySelector("main") as HTMLElement | null;
-  const el = document.getElementById(id);
-  const shift = el?.id === 'home' ? 100 : 72;
-
-  if (!main || !el) return;
-
-  // scroll inside <main>, account for padding / spacing
-  main.scrollTo({
-    top: el.offsetTop - shift,
-    behavior: "smooth",
-  });
-
-  menuExpanded.value = false;
-};
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+}
 </script>
 
 <template>
@@ -46,9 +36,15 @@ const goTo = async (id: string) => {
     </div>
     <ul :class="[!menuExpanded ? 'hidden' : 'flex']"
         class="grid grid-cols-1 md:flex md:justify-evenly mt-4 md:mt-0 uppercase md:w-full">
-      <li class="border-b md:border-b-0 border-zinc-700 pb-6 md:py-6"><a class="w-full text-center" @click.prevent="goTo('home')">Home</a></li>
-      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center" @click.prevent="goTo('services')">services</a></li>
-      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center" @click.prevent="goTo('benefits')">About Us</a></li>
+      <li class="border-b md:border-b-0 border-zinc-700 pb-6 md:py-6"><a class="w-full text-center"
+                                                                         @click.prevent="goTo('home')">Home</a>
+      </li>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center"
+                                                                 @click.prevent="goTo('services')">services</a>
+      </li>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center"
+                                                                 @click.prevent="goTo('benefits')">About
+        Us</a></li>
       <li class="py-6"><a class="w-full text-center" @click.prevent="goTo('faq')">FAQ</a></li>
     </ul>
   </header>

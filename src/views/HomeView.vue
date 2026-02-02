@@ -17,7 +17,7 @@ const openIndex = ref<number | null>(null)
 
 <template>
   <div class="mx-auto max-w-6xl">
-    <section id="home" class="relative rounded-2xl overflow-hidden m-6 h-[80vh] md:h-auto">
+    <section id="home" class="scroll-mt-24 relative rounded-2xl overflow-hidden m-6 h-[80vh] md:h-auto">
       <div class="absolute inset-0 bg-cover bg-center md:hidden" :style="{ backgroundImage: `url(${bgV})` }" />
       <div class="absolute inset-0 bg-cover bg-center hidden md:block" :style="{ backgroundImage: `url(${bgH})` }" />
 
@@ -33,7 +33,7 @@ const openIndex = ref<number | null>(null)
       </div>
     </section>
 
-    <section id="services" class="p-6">
+    <section id="services" class="scroll-mt-18 p-6">
       <h1 class="text-4xl text-center">Our Services</h1>
 
       <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -46,7 +46,7 @@ const openIndex = ref<number | null>(null)
       </div>
     </section>
 
-    <section id="benefits" class="p-6">
+    <section id="benefits" class="scroll-mt-18 p-6">
       <ul class="grid grid-cols-2 gap-8 md:grid-cols-4">
         <li v-for="b in benefits" :key="b.title">
           <Benefits :badge="b.badge" :title="b.title">{{ b.text }}</Benefits>
@@ -54,7 +54,7 @@ const openIndex = ref<number | null>(null)
       </ul>
     </section>
 
-    <section id="about-us" class="p-6">
+    <section id="about-us" class="scroll-mt-18 p-6">
       <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic">
         <div class="space-y-4">
           <div>
@@ -76,7 +76,7 @@ const openIndex = ref<number | null>(null)
       </TheCard>
     </section>
 
-    <section id="faq" class="p-6 space-y-4">
+    <section id="faq" class="scroll-mt-18 p-6 space-y-4">
       <div class="mx-auto max-w-3xl">
         <h2 class="text-4xl text-center">F.A.Q.</h2>
 
@@ -92,6 +92,5 @@ const openIndex = ref<number | null>(null)
         </div>
       </div>
     </section>
-
   </div>
 </template>
