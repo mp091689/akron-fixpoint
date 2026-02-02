@@ -14,5 +14,4 @@ export const serviceCards: ServiceCard[] = [
   { title: 'Tablet service', backgroundImg: bgCardTablet },
   { title: 'Laptop service', backgroundImg: bgCardMac },
   { title: 'Gaming console service', backgroundImg: bgCardConsole },
-  { title: 'TV service', backgroundImg: bgCardTV },
 ]

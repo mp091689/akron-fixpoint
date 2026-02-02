@@ -11,15 +11,22 @@ import {benefits} from "@/data/benefits";
 import bgV from '@/assets/repair-service-_v_.jpg'
 import bgH from '@/assets/repair-service-_h_.jpg'
 
-
 const openIndex = ref<number | null>(null)
+
+const lgSpanClass = (i: number) => {
+  const m = i % 4
+  return m === 1 || m === 2 ? 'lg:col-span-1' : 'lg:col-span-2'
+}
 </script>
 
 <template>
   <div class="mx-auto max-w-6xl">
-    <section id="home" class="scroll-mt-24 relative rounded-2xl overflow-hidden m-6 h-[80vh] md:h-auto">
-      <div class="absolute inset-0 bg-cover bg-center md:hidden" :style="{ backgroundImage: `url(${bgV})` }" />
-      <div class="absolute inset-0 bg-cover bg-center hidden md:block" :style="{ backgroundImage: `url(${bgH})` }" />
+    <section id="home"
+             class="scroll-mt-24 relative rounded-2xl overflow-hidden m-6 h-[80vh] md:h-auto">
+      <div :style="{ backgroundImage: `url(${bgV})` }"
+           class="absolute inset-0 bg-cover bg-center md:hidden" />
+      <div :style="{ backgroundImage: `url(${bgH})` }"
+           class="absolute inset-0 bg-cover bg-center hidden md:block" />
 
       <div class="relative flex flex-col items-center md:items-start p-6 md:p-12">
         <div class="flex flex-col mb-4">
@@ -28,7 +35,8 @@ const openIndex = ref<number | null>(null)
         </div>
 
         <p class="max-w-2xl text-center md:text-left md:w-2/5 leading-8 text-gray-700">
-          Professional repair of smartphones, tablets, laptops, gaming consoles, and other electronics in Akron.
+          Professional repair of smartphones, tablets, laptops, gaming consoles, and other
+          electronics in Akron.
         </p>
       </div>
     </section>
@@ -38,10 +46,11 @@ const openIndex = ref<number | null>(null)
 
       <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <TheCard
-          v-for="card in serviceCards"
+          v-for="(card, i) in serviceCards"
           :key="card.title"
           :background-img="card.backgroundImg"
           :title="card.title"
+          :class="lgSpanClass(i)"
         />
       </div>
     </section>
@@ -84,9 +93,9 @@ const openIndex = ref<number | null>(null)
           <TheFaqItem
             v-for="(it, i) in faqItems"
             :key="it.q"
-            :question="it.q"
             :answer="it.a"
             :open="openIndex === i"
+            :question="it.q"
             @toggle="openIndex = openIndex === i ? null : i"
           />
         </div>
