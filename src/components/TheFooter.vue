@@ -10,7 +10,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer>
+  <footer id="footer">
     <div class="mx-auto max-w-6xl px-6 py-12">
       <div class="grid gap-10 md:grid-cols-2">
         <!-- Brand -->

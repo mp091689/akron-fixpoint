@@ -36,16 +36,22 @@ const goTo = async (id: string) => {
     </div>
     <ul :class="[!menuExpanded ? 'hidden' : 'flex']"
         class="grid grid-cols-1 md:flex md:justify-evenly mt-4 md:mt-0 uppercase md:w-full">
-      <li class="border-b md:border-b-0 border-zinc-700 pb-6 md:py-6"><a class="w-full text-center"
-                                                                         @click.prevent="goTo('home')">Home</a>
+      <li class="border-b md:border-b-0 border-zinc-700 pb-6 md:py-6">
+        <a class="w-full text-center" @click.prevent="goTo('home')">home</a>
       </li>
-      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center"
-                                                                 @click.prevent="goTo('services')">services</a>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6">
+        <a class="w-full text-center" @click.prevent="goTo('services')">services</a>
       </li>
-      <li class="border-b md:border-b-0 border-zinc-700 py-6"><a class="w-full text-center"
-                                                                 @click.prevent="goTo('benefits')">About
-        Us</a></li>
-      <li class="py-6"><a class="w-full text-center" @click.prevent="goTo('faq')">FAQ</a></li>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6">
+        <a class="w-full text-center" @click.prevent="goTo('benefits')">benefits</a>
+      </li>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6">
+        <a class="w-full text-center" @click.prevent="goTo('about-us')">About Us</a>
+      </li>
+      <li class="border-b md:border-b-0 border-zinc-700 py-6">
+        <a class="w-full text-center" @click.prevent="goTo('faq')">FAQ</a>
+      </li>
+      <li class="py-6"><a class="w-full text-center" @click.prevent="goTo('footer')">Contacts</a></li>
     </ul>
   </header>
 </template>

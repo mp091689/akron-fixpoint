@@ -63,26 +63,25 @@ const lgSpanClass = (i: number) => {
       </ul>
     </section>
 
-    <section id="about-us" class="scroll-mt-18 p-6">
-      <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic">
-        <div class="space-y-4">
-          <div>
-            <h2 class="text-4xl">FixPoint Akron</h2>
-            <h3 class="text-2xl">Service Center</h3>
-          </div>
-          <p><strong class="font-bold">FixPoint Akron</strong> provides professional repair of
-            phones,
-            smartphones, tablets, laptops, and other electronic devices of almost all brands and
-            models.
-          </p>
-          <p>We never charge money just “to take a look.” At <strong class="font-bold">FixPoint
-            Akron</strong>, diagnostics for your device
-            are completely free. Every day, we handle numerous repairs, monitor the work of our
-            technicians, and ensure that repair times for phones, laptops, tablets, and other
-            gadgets
-            stay fast and reliable.</p>
+    <section id="about-us" class="scroll-mt-18 p-6 lg:grid lg:grid-cols-3 lg:gap-x-6">
+      <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic"/>
+      <div class="space-y-4 lg:col-span-2">
+        <div>
+          <h2 class="text-4xl">FixPoint Akron</h2>
+          <h3 class="text-2xl">Service Center</h3>
         </div>
-      </TheCard>
+        <p><strong class="font-bold">FixPoint Akron</strong> provides professional repair of
+          phones,
+          smartphones, tablets, laptops, and other electronic devices of almost all brands and
+          models.
+        </p>
+        <p>We never charge money just “to take a look.” At <strong class="font-bold">FixPoint
+          Akron</strong>, diagnostics for your device
+          are completely free. Every day, we handle numerous repairs, monitor the work of our
+          technicians, and ensure that repair times for phones, laptops, tablets, and other
+          gadgets
+          stay fast and reliable.</p>
+      </div>
     </section>
 
     <section id="faq" class="scroll-mt-18 p-6 space-y-4">
