@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import {nextTick, onMounted, ref} from "vue";
+import { ref, nextTick } from "vue";
 import router from "@/router";
 
-const menuExpanded = ref<boolean>(false);
+const menuExpanded = ref(false);
 
-const offsetTopMap = ref({} as { [key: string]: number });
+const goTo = async (id: string) => {
+  await router.push({ name: "home" });
+  await nextTick();
 
-const goTo = async (anchor: string) => {
-  await router.push({name: "home"});
-  const main = document.querySelector('main')!;
-  main.scrollTo({ top: offsetTopMap.value[anchor] ?? 0, behavior: 'smooth' })
+  const main = document.querySelector("main") as HTMLElement | null;
+  const el = document.getElementById(id);
+  const shift = el?.id === 'home' ? 100 : 72;
+
+  if (!main || !el) return;
+
+  // scroll inside <main>, account for padding / spacing
+  main.scrollTo({
+    top: el.offsetTop - shift,
+    behavior: "smooth",
+  });
+
   menuExpanded.value = false;
-}
-
-onMounted(async () => {
-  await nextTick()
-  const sections = document.querySelector("main")?.getElementsByClassName("sticky")
-  Array.from(sections ?? []).forEach((el: Element) => {
-    const htmlEl = el as HTMLElement
-    offsetTopMap.value[htmlEl.id] = htmlEl.offsetTop
-  })
-})
+};
 </script>
 
 <template>
@@ -44,8 +45,8 @@ onMounted(async () => {
         :class="[!menuExpanded ? 'hidden' : 'flex']">
       <li class="border-b border-zinc-700 pb-6"><a @click.prevent="goTo('home')" class="w-full text-center">Home</a></li>
       <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('services')" class="w-full text-center">services</a></li>
-      <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('about-us')" class="w-full text-center">About Us</a></li>
-      <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('feedback')" class="w-full text-center">Feedback</a></li>
+      <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('benefits')" class="w-full text-center">About Us</a></li>
+<!--      <li class="border-b border-zinc-700 py-6"><a @click.prevent="goTo('feedback')" class="w-full text-center">Feedback</a></li>-->
       <li class="py-6"><a @click.prevent="goTo('faq')" class="w-full text-center">FAQ</a></li>
     </ul>
   </header>

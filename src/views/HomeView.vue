@@ -16,7 +16,7 @@ const openIndex = ref<number | null>(null)
 
 <template>
   <section id="home" :style="{ backgroundImage: `url(${bgImage})` }"
-           class="rounded-2xl w-full h-10/12 bg-cover bg-center flex flex-col items-center p-6 sticky">
+           class="rounded-2xl h-10/12 bg-cover bg-center flex flex-col items-center p-6 m-6">
     <div class="flex flex-col mb-4">
       <h2 class="text-left text-6xl text-gray-800">FixPoint</h2>
       <p class="text-right text-gray-800 text-xl -mt-2">Akron</p>
@@ -26,7 +26,7 @@ const openIndex = ref<number | null>(null)
   </section>
 
   <section id="services" class="p-6">
-    <h1 class="mt-16 text-4xl text-center">Our Services</h1>
+    <h1 class="text-4xl text-center">Our Services</h1>
     <TheCard
       v-for="card in serviceCards"
       :key="card.title"
@@ -36,7 +36,7 @@ const openIndex = ref<number | null>(null)
   </section>
 
   <section id="benefits" class="p-6">
-    <ul class="grid grid-cols-2 gap-8 sticky">
+    <ul class="grid grid-cols-2 gap-8">
       <li v-for="b in benefits" :key="b.title">
         <Benefits :badge="b.badge" :title="b.title">
           {{ b.text }}
@@ -45,7 +45,7 @@ const openIndex = ref<number | null>(null)
     </ul>
   </section>
 
-  <section id="about-us" class="p-6 sticky">
+  <section id="about-us" class="p-6">
     <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic">
       <div class="space-y-4">
         <div>
@@ -64,7 +64,7 @@ const openIndex = ref<number | null>(null)
     </TheCard>
   </section>
 
-  <section id="faq" class="p-6 space-y-4 sticky">
+  <section id="faq" class="p-6 space-y-4">
     <h2 class="text-4xl text-center">F.A.Q.</h2>
     <TheFaqItem
       v-for="(it, i) in faqItems"
