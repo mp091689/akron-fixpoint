@@ -1,13 +1,23 @@
 @import './base.css';
 
+html, body, #app {
+  height: 100%;
+}
+
 body {
   @apply bg-zinc-800;
+  overflow: hidden;
 }
 
 body, .font-raleway {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+main {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .material-symbols-outlined:hover {
