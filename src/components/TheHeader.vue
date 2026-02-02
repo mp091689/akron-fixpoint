@@ -52,6 +52,7 @@ const goTo = async (id: string) => {
       <li class="py-6"><a class="w-full text-center" @click.prevent="goTo('faq')">FAQ</a></li>
     </ul>
   </header>
+  <div class="h-18"></div>
 </template>
 
 <style scoped>

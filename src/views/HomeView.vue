@@ -17,7 +17,7 @@ const openIndex = ref<number | null>(null)
 
 <template>
   <div class="mx-auto max-w-6xl">
-    <section id="home" class="relative rounded-2xl overflow-hidden m-6">
+    <section id="home" class="relative rounded-2xl overflow-hidden m-6 h-[80vh] md:h-auto">
       <div class="absolute inset-0 bg-cover bg-center md:hidden" :style="{ backgroundImage: `url(${bgV})` }" />
       <div class="absolute inset-0 bg-cover bg-center hidden md:block" :style="{ backgroundImage: `url(${bgH})` }" />
 
