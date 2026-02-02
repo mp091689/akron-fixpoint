@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onMounted, ref} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 import router from "@/router";
 
 const menuExpanded = ref<boolean>(false);
@@ -9,19 +9,18 @@ const offsetTopMap = ref({} as { [key: string]: number });
 const goTo = async (anchor: string) => {
   await router.push({name: "home"});
   const main = document.querySelector('main')!;
-  main.scrollTo({top: offsetTopMap.value[anchor]});
+  main.scrollTo({ top: offsetTopMap.value[anchor] ?? 0, behavior: 'smooth' })
   menuExpanded.value = false;
 }
 
-onMounted(() => {
-  // refactor this f#$#@$hit
-  setTimeout(() => {
-    const sections = document.querySelector("main")?.getElementsByClassName("sticky");
-    Array.prototype.forEach.call(sections, function (el) {
-      offsetTopMap.value[el.id] = el.offsetTop;
-    });
-  }, 1);
-});
+onMounted(async () => {
+  await nextTick()
+  const sections = document.querySelector("main")?.getElementsByClassName("sticky")
+  Array.from(sections ?? []).forEach((el: Element) => {
+    const htmlEl = el as HTMLElement
+    offsetTopMap.value[htmlEl.id] = htmlEl.offsetTop
+  })
+})
 </script>
 
 <template>
