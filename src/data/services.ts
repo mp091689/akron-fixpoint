@@ -1,8 +1,8 @@
-import bgCardMac from '@/assets/servises/mac.webp'
-import bgCardPhone from '@/assets/servises/phone.webp'
-import bgCardConsole from '@/assets/servises/console.webp'
-import bgCardTV from '@/assets/servises/tv.webp'
-import bgCardTablet from '@/assets/servises/tablet.webp'
+import bgCardMac from '@/assets/services/mac.webp'
+import bgCardPhone from '@/assets/services/phone.webp'
+import bgCardConsole from '@/assets/services/console.webp'
+import bgCardTV from '@/assets/services/tv.webp'
+import bgCardTablet from '@/assets/services/tablet.webp'
 
 export type ServiceCard = {
   title: string

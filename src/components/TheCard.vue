@@ -17,7 +17,7 @@ const bgStyle = computed(() => {
 </script>
 
 <template>
-  <div class="mt-5">
+  <div class="w-full">
     <div
       :style="bgStyle"
       class="card-header rounded-2xl w-full h-64 bg-cover bg-center flex flex-col justify-end p-8">

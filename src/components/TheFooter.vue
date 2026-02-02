@@ -12,7 +12,7 @@ const year = new Date().getFullYear()
 <template>
   <footer>
     <div class="mx-auto max-w-6xl px-6 py-12">
-      <div class="grid gap-10 md:grid-cols-3">
+      <div class="grid gap-10 md:grid-cols-2">
         <!-- Brand -->
         <div class="space-y-3">
           <div class="leading-tight">
@@ -69,16 +69,16 @@ const year = new Date().getFullYear()
                 <div>{{ props.serviceArea || 'Akron, OH + surrounding areas' }}</div>
               </div>
             </div>
-
-            <div class="text-xs text-zinc-400 leading-5 pt-2">
-              Note: We are a <span class="text-zinc-300">mobile repair service</span> and do not accept walk-ins.
-              Contact us to schedule a pickup/drop-off or appointment.
-            </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-10 border-t border-zinc-700 pt-6 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <div class="text-xs text-zinc-400 leading-5 pt-2 mt-6">
+        Note: We are a <span class="text-zinc-300">mobile repair service</span> and do not accept walk-ins.
+        Contact us to schedule a pickup/drop-off or appointment.
+      </div>
+
+      <div class="mt-6 border-t border-zinc-700 pt-6 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
         <div class="text-xs text-zinc-400">
           © {{ year }} FixPoint Akron. All rights reserved.
         </div>
