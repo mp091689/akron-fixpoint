@@ -1,23 +1,30 @@
 @import './base.css';
 
-html, body, #app {
-  height: 100%;
+/* ✅ Let the document scroll normally */
+html, body {
+  height: auto;
+}
+
+#app {
+  min-height: 100vh;
 }
 
 body {
   @apply bg-zinc-800;
-  overflow: hidden;
+  overflow-y: auto; /* or just remove overflow completely */
 }
 
+/* fonts */
 body, .font-raleway {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
+/* These are for scroll containers only. If body is scrolling, remove or keep harmless. */
 main {
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
 }
 
 .material-symbols-outlined:hover {

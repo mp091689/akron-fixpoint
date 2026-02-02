@@ -7,7 +7,7 @@ import TheFooter from "@/components/TheFooter.vue";
   <div class="h-screen flex flex-col bg-zinc-900">
     <TheHeader />
 
-    <main class="flex-1 min-h-0 overflow-y-auto bg-zinc-800 font-extralight text-white">
+    <main class="pt-[80px] bg-zinc-800 font-extralight text-white">
       <RouterView />
 
       <TheFooter
