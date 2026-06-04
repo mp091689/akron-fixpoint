@@ -16,7 +16,7 @@ const year = new Date().getFullYear()
         <!-- Brand -->
         <div class="space-y-3">
           <div class="leading-tight">
-            <div class="text-lg font-light text-zinc-300 -mt-1">Hartvile</div>
+            <div class="text-lg font-light text-zinc-300 -mt-1">Hartville</div>
             <div class="text-3xl font-light">Electronics Repair</div>
           </div>
 
@@ -66,7 +66,7 @@ const year = new Date().getFullYear()
               <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">location_on</span>
               <div>
                 <div class="text-sm text-zinc-400">Service Area</div>
-                <div>{{ props.serviceArea || 'Hartvile, OH + surrounding areas' }}</div>
+                <div>{{ props.serviceArea || 'Hartville, OH + surrounding areas' }}</div>
               </div>
             </div>
           </div>
