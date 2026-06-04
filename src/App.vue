@@ -14,7 +14,7 @@ import TheFooter from "@/components/TheFooter.vue";
         hours="Mon–Sun • 9:00 AM – 8:00 PM"
         phone="(330) 555-1234"
         phoneHref="tel:+13305551234"
-        serviceArea="Akron, OH + surrounding areas"
+        serviceArea="Hartville, OH + surrounding areas"
       />
     </main>
   </div>

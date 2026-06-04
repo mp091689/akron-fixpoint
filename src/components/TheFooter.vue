@@ -2,7 +2,7 @@
 const props = defineProps<{
   phone?: string          // e.g. "(330) 555-1234"
   phoneHref?: string      // e.g. "tel:+13305551234"
-  serviceArea?: string    // e.g. "Akron, OH + surrounding areas"
+  serviceArea?: string    // e.g. "Hartville, OH + surrounding areas"
   hours?: string          // e.g. "Mon–Sun • 9:00 AM – 8:00 PM"
 }>()
 
@@ -16,8 +16,8 @@ const year = new Date().getFullYear()
         <!-- Brand -->
         <div class="space-y-3">
           <div class="leading-tight">
-            <div class="text-3xl font-light">FixPoint</div>
-            <div class="text-lg font-light text-zinc-300 -mt-1">Akron</div>
+            <div class="text-lg font-light text-zinc-300 -mt-1">Hartvile</div>
+            <div class="text-3xl font-light">Electronics Repair</div>
           </div>
 
           <p class="text-sm text-zinc-300 leading-6">
@@ -66,7 +66,7 @@ const year = new Date().getFullYear()
               <span class="material-symbols-outlined text-yellow-400" aria-hidden="true">location_on</span>
               <div>
                 <div class="text-sm text-zinc-400">Service Area</div>
-                <div>{{ props.serviceArea || 'Akron, OH + surrounding areas' }}</div>
+                <div>{{ props.serviceArea || 'Hartvile, OH + surrounding areas' }}</div>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const year = new Date().getFullYear()
 
       <div class="mt-6 border-t border-zinc-700 pt-6 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
         <div class="text-xs text-zinc-400">
-          © {{ year }} FixPoint Akron. All rights reserved.
+          © {{ year }} Hartville Electronics Repair. All rights reserved.
         </div>
 
         <div class="text-xs text-zinc-500">

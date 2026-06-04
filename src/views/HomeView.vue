@@ -30,13 +30,13 @@ const lgSpanClass = (i: number) => {
 
       <div class="relative flex flex-col items-center md:items-start p-6 md:p-12">
         <div class="flex flex-col mb-4">
-          <h2 class="text-left text-6xl text-gray-800">FixPoint</h2>
-          <p class="text-right text-gray-800 text-xl -mt-2">Akron</p>
+          <h2 class="text-left text-6xl text-gray-800">Electronics Repair</h2>
+          <p class="text-right text-gray-800 text-xl -mt-2">Hartville</p>
         </div>
 
         <p class="max-w-2xl text-center md:text-left md:w-2/5 leading-8 text-gray-700">
           Professional repair of smartphones, tablets, laptops, gaming consoles, and other
-          electronics in Akron.
+          electronics in Hartville.
         </p>
       </div>
     </section>
@@ -67,16 +67,15 @@ const lgSpanClass = (i: number) => {
       <TheCard :background-img="bgCardDiagnostic" title="Free diagnostic"/>
       <div class="space-y-4 lg:col-span-2">
         <div>
-          <h2 class="text-4xl">FixPoint Akron</h2>
+          <h2 class="text-4xl">Hartville Electronics Repair</h2>
           <h3 class="text-2xl">Service Center</h3>
         </div>
-        <p><strong class="font-bold">FixPoint Akron</strong> provides professional repair of
+        <p><strong class="font-bold">Hartville Electronics Repair</strong> provides professional repair of
           phones,
           smartphones, tablets, laptops, and other electronic devices of almost all brands and
           models.
         </p>
-        <p>We never charge money just “to take a look.” At <strong class="font-bold">FixPoint
-          Akron</strong>, diagnostics for your device
+        <p>We never charge money just “to take a look.” At <strong class="font-bold">Hartville Electronics Repair</strong>, diagnostics for your device
           are completely free. Every day, we handle numerous repairs, monitor the work of our
           technicians, and ensure that repair times for phones, laptops, tablets, and other
           gadgets

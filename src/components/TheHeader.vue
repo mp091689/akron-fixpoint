@@ -18,7 +18,7 @@ const goTo = async (id: string) => {
   <header
     class="fixed top-0 left-0 w-screen z-50 px-4 bg-zinc-900 text-zinc-300 border-b border-b-zinc-700 md:flex">
     <div class="flex grid-cols-2">
-      <img alt="logo" class="w-18" src="@/assets/logo.png">
+      <img alt="Hartvile Electronics Repair Logo" class="h-14 my-auto" src="@/assets/logo.webp">
       <div class="w-full flex justify-end">
         <button class="md:hidden mr-2" @click="menuExpanded = !menuExpanded">
           <svg aria-hidden="true" class="w-8 h-8" fill="none" viewBox="0 0 17 14"

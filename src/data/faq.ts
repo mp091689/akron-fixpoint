@@ -67,7 +67,7 @@ export const faqItems: FaqItem[] = [
   {
     q: 'What areas do you serve?',
     a: [
-      'We currently serve Akron and surrounding areas.',
+      'We currently serve Hartville and surrounding areas.',
       'Availability depends on the type of repair — contact us to confirm service in your location.',
     ],
   },
